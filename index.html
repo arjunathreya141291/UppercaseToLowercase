@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html ng-app="myApp">
+
+<head>
+    <!-- Title of webpage -->
+    <title>Uppercase to Lowercase</title>
+    <!-- Put all scripts in head section -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+
+<body>
+    <div id="container">
+        <!-- ng-controller directive to indicate start of angular code -->
+        <div ng-controller="myController as myCtrl">
+            <h2>{{myCtrl.greeting}}</h2>
+            <label>Please enter your text in uppercase </label>
+            <input type="text" ng-model="userInput" class="form-control"><br><br>
+            <p>You entered : {{userInput}}</p>
+            <p> In lowercase : {{userInput | lowercase}}</p>
+        </div>
+    </div>
+</body>
+</html>
